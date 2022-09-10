@@ -12,40 +12,139 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_test_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Foo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsE-pk-ULo">
-                                <rect key="frame" x="103" y="170" width="207" height="64"/>
+                                <rect key="frame" x="20" y="44" width="118" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="tintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Foo" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atQ-s6-wvc">
-                                <rect key="frame" x="103" y="330" width="193" height="34"/>
+                                <rect key="frame" x="147" y="59" width="121" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-GV-b21">
-                                <rect key="frame" x="152" y="490" width="110" height="65"/>
+                                <rect key="frame" x="276" y="44" width="110" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button Foo"/>
+                                <state key="normal" title="Foo Button"/>
                                 <connections>
-                                    <action selector="ActionButtonFoo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbd-tX-d9E"/>
+                                    <action selector="fooButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHr-3N-gre"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZr-ti-FPf">
+                                <rect key="frame" x="134" y="101" width="146" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Bar Button"/>
+                                <connections>
+                                    <action selector="barButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sct-Hq-ctL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Web Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHs-wQ-05C">
+                                <rect key="frame" x="20" y="140" width="249" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbZ-px-0TX">
+                                <rect key="frame" x="288" y="140" width="106" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Web Button"/>
+                                <connections>
+                                    <action selector="webButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C19-gi-4li"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kek-8A-1S4">
+                                <rect key="frame" x="20" y="218" width="374" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VU0-Cp-A5i">
+                                <rect key="frame" x="197" y="417" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH9-FO-EQb">
+                                <rect key="frame" x="20" y="182" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Web Home Button"/>
+                                <connections>
+                                    <action selector="webHomeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbC-Qq-5WL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIr-Pd-Vtd">
+                                <rect key="frame" x="134" y="182" width="146" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Web Code Button"/>
+                                <connections>
+                                    <action selector="webCodeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exp-a5-R7E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-dc-cRI">
+                                <rect key="frame" x="268" y="182" width="126" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Web File Button"/>
+                                <connections>
+                                    <action selector="webFileButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWs-7N-eQ8"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-vp-Ha4">
+                                <rect key="frame" x="20" y="667" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pY6-Pd-PSH"/>
+                                    <barButtonItem systemItem="stop" id="agL-SC-tpM">
+                                        <connections>
+                                            <action selector="webToolStopAction:" destination="BYZ-38-t0r" id="eP1-tY-anY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WjJ-eu-05c"/>
+                                    <barButtonItem systemItem="refresh" id="bVc-fj-7EX">
+                                        <connections>
+                                            <action selector="webToolRefreshAction:" destination="BYZ-38-t0r" id="LWT-O5-85m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F7U-8w-Rs6"/>
+                                    <barButtonItem systemItem="rewind" id="5vF-n4-Ed1">
+                                        <connections>
+                                            <action selector="webToolBackAction:" destination="BYZ-38-t0r" id="CcQ-5q-Ecx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pzm-ff-MDb"/>
+                                    <barButtonItem systemItem="fastForward" id="haq-M6-qs7">
+                                        <connections>
+                                            <action selector="webToolForwardAction:" destination="BYZ-38-t0r" id="49u-0F-zjT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JtX-wT-9A6"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="ButtonFoo" destination="b0E-GV-b21" id="Un4-au-EAP"/>
-                        <outlet property="LabelFoo" destination="FsE-pk-ULo" id="3ML-G7-Fzb"/>
-                        <outlet property="TextFoo" destination="atQ-s6-wvc" id="7ds-an-fcf"/>
+                        <outlet property="BarButton" destination="YZr-ti-FPf" id="o8N-YR-vzg"/>
+                        <outlet property="FooButton" destination="b0E-GV-b21" id="Ihs-vz-HAA"/>
+                        <outlet property="FooLabel" destination="FsE-pk-ULo" id="UEO-g1-2O5"/>
+                        <outlet property="FooText" destination="atQ-s6-wvc" id="d6A-Ab-ynB"/>
+                        <outlet property="WebIndicator" destination="VU0-Cp-A5i" id="sdn-td-qCG"/>
+                        <outlet property="WebText" destination="DHs-wQ-05C" id="dBJ-SE-Jvl"/>
+                        <outlet property="WebView" destination="Kek-8A-1S4" id="u4q-9z-KS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
