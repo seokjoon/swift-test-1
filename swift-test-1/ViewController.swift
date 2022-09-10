@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var BarButton: UIButton!
     
@@ -46,48 +46,55 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        WebViewFoo.navigationDelegate = self
         webLoad("https://stage.daab.me/customer_v2")
         //webLoad("http://memorobot.com")
     }
     
-    @IBAction func webButtonAction(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func webCodeButtonAction(_ sender: UIButton) {
-    }
-    
-    @IBAction func webFileButtonAction(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func webHomeButtonAction(_ sender: UIButton) {
-    
-    }
-
     @IBOutlet var WebIndicator: UIActivityIndicatorView!
     
     func webLoad(_ url: String) {
         let urlLocal = URL(string: url)
         let req = URLRequest(url: urlLocal!)
-        WebView.load(req)
+        WebViewFoo.load(req)
     }
     
     @IBOutlet var WebText: UITextField!
     
     
     @IBAction func webToolBackAction(_ sender: UIBarButtonItem) {
+        WebViewFoo.stopLoading()
     }
     
     @IBAction func webToolForwardAction(_ sender: UIBarButtonItem) {
+        WebViewFoo.goForward()
     }
     
     @IBAction func webToolRefreshAction(_ sender: UIBarButtonItem) {
+        WebViewFoo.reload()
     }
     
     @IBAction func webToolStopAction(_ sender: UIBarButtonItem) {
+        WebViewFoo.goForward()
+    }
+   
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        WebIndicator.startAnimating()
+        WebIndicator.isHidden = false
     }
     
-    @IBOutlet var WebView: WKWebView!
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        WebIndicator.stopAnimating()
+        WebIndicator.isHidden = true
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        WebIndicator.stopAnimating()
+        WebIndicator.isHidden = true
+    }
+    
+    @IBOutlet var WebViewFoo: WKWebView!
 
+    
 }

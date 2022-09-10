@@ -47,23 +47,8 @@
                                     <action selector="barButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sct-Hq-ctL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Web Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHs-wQ-05C">
-                                <rect key="frame" x="20" y="140" width="249" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbZ-px-0TX">
-                                <rect key="frame" x="288" y="140" width="106" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Web Button"/>
-                                <connections>
-                                    <action selector="webButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C19-gi-4li"/>
-                                </connections>
-                            </button>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kek-8A-1S4">
-                                <rect key="frame" x="20" y="218" width="374" height="394"/>
+                                <rect key="frame" x="20" y="140" width="374" height="472"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -75,33 +60,6 @@
                                 <rect key="frame" x="197" y="417" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH9-FO-EQb">
-                                <rect key="frame" x="20" y="182" width="118" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Web Home Button"/>
-                                <connections>
-                                    <action selector="webHomeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbC-Qq-5WL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIr-Pd-Vtd">
-                                <rect key="frame" x="134" y="182" width="146" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Web Code Button"/>
-                                <connections>
-                                    <action selector="webCodeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exp-a5-R7E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-dc-cRI">
-                                <rect key="frame" x="268" y="182" width="126" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Web File Button"/>
-                                <connections>
-                                    <action selector="webFileButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWs-7N-eQ8"/>
-                                </connections>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-vp-Ha4">
                                 <rect key="frame" x="20" y="667" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -143,8 +101,7 @@
                         <outlet property="FooLabel" destination="FsE-pk-ULo" id="UEO-g1-2O5"/>
                         <outlet property="FooText" destination="atQ-s6-wvc" id="d6A-Ab-ynB"/>
                         <outlet property="WebIndicator" destination="VU0-Cp-A5i" id="sdn-td-qCG"/>
-                        <outlet property="WebText" destination="DHs-wQ-05C" id="dBJ-SE-Jvl"/>
-                        <outlet property="WebView" destination="Kek-8A-1S4" id="u4q-9z-KS5"/>
+                        <outlet property="WebViewFoo" destination="Kek-8A-1S4" id="eeG-TQ-w80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
