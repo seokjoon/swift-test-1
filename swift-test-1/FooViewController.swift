@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FooViewController.swift
 //  swift-test-1
 //
 //  Created by m on 2022/09/09.
@@ -8,10 +8,22 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class FooViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var BarButton: UIButton!
     
+    @IBOutlet var FooButton: UIButton!
+    
+    @IBOutlet var FooLabel: UILabel!
+    
+    @IBOutlet var FooText: UITextField!
+    
+    @IBOutlet var WebIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet var WebViewFoo: WKWebView!
+    
+    
+
     @IBAction func barButtonAction(_ sender: UIButton) {
         let barAlert = UIAlertController(
             title: "bar alert",
@@ -37,29 +49,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         FooLabel.text = "Foo: " + FooText.text!
     }
     
-    @IBOutlet var FooButton: UIButton!
-    
-    @IBOutlet var FooLabel: UILabel!
-    
-    @IBOutlet var FooText: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        WebViewFoo.navigationDelegate = self
-        webLoad("https://stage.daab.me/customer_v2")
-        //webLoad("http://memorobot.com")
-    }
-    
-    @IBOutlet var WebIndicator: UIActivityIndicatorView!
-    
-    func webLoad(_ url: String) {
-        let urlLocal = URL(string: url)
-        let req = URLRequest(url: urlLocal!)
-        WebViewFoo.load(req)
-    }
-    
     @IBAction func webToolBackAction(_ sender: UIBarButtonItem) {
         WebViewFoo.stopLoading()
     }
@@ -74,6 +63,23 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @IBAction func webToolStopAction(_ sender: UIBarButtonItem) {
         WebViewFoo.goForward()
+    }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        WebViewFoo.navigationDelegate = self
+        webLoad("https://stage.daab.me/customer_v2")
+        //webLoad("http://memorobot.com")
+    }
+    
+    func webLoad(_ url: String) {
+        let urlLocal = URL(string: url)
+        let req = URLRequest(url: urlLocal!)
+        WebViewFoo.load(req)
     }
    
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
@@ -90,8 +96,4 @@ class ViewController: UIViewController, WKNavigationDelegate {
         WebIndicator.stopAnimating()
         WebIndicator.isHidden = true
     }
-    
-    @IBOutlet var WebViewFoo: WKWebView!
-
-    
 }

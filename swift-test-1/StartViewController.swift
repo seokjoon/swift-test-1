@@ -7,9 +7,24 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
- 
+class StartViewController: UIViewController, BarMsgDelegate {
+
+    @IBOutlet var BarMsgText: UITextView!
+    
+    
+    
+    func didBarMsgDone(_ controller: BarViewController, msg: String) {
+        BarMsgText.text = msg
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "BarIdentifier") {
+            let barViewController = segue.destination as! BarViewController
+            barViewController.barMsgDelegate = self
+        }
+    }
+    
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
 }
