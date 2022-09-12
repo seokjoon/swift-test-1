@@ -60,9 +60,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         WebViewFoo.load(req)
     }
     
-    @IBOutlet var WebText: UITextField!
-    
-    
     @IBAction func webToolBackAction(_ sender: UIBarButtonItem) {
         WebViewFoo.stopLoading()
     }
