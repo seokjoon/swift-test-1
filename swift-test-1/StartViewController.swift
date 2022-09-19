@@ -17,6 +17,11 @@ class StartViewController: UIViewController, BarMsgDelegate {
         BarMsgText.text = msg
     }
     
+    @IBAction func moveFeeButtonAction(_ sender: UIButton) {
+        let fvc = self.storyboard!.instantiateViewController(withIdentifier: "Fee")
+        self.present(fvc, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "BarIdentifier") {
             let barViewController = segue.destination as! BarViewController

@@ -17,6 +17,7 @@
 		0D07CD0728CF05DE00A3C5C6 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D07CD0628CF05DE00A3C5C6 /* BarViewController.swift */; };
 		0D3A914D28CEF74B00F76C95 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3A914C28CEF74B00F76C95 /* Start.storyboard */; };
 		0D3A914F28CEF75A00F76C95 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3A914E28CEF75A00F76C95 /* StartViewController.swift */; };
+		0DCEE5CD28D8A31F001D2758 /* FeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCEE5CC28D8A31F001D2758 /* FeeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0D07CD0628CF05DE00A3C5C6 /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		0D3A914C28CEF74B00F76C95 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		0D3A914E28CEF75A00F76C95 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		0DCEE5CC28D8A31F001D2758 /* FeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +66,18 @@
 		0CC23E3F28CB514D00770602 /* swift-test-1 */ = {
 			isa = PBXGroup;
 			children = (
+				0CC23E4028CB514D00770602 /* AppDelegate.swift */,
+				0CC23E4928CB514E00770602 /* Assets.xcassets */,
 				0D07CD0428CF05CC00A3C5C6 /* Bar.storyboard */,
 				0D07CD0628CF05DE00A3C5C6 /* BarViewController.swift */,
-				0D3A914E28CEF75A00F76C95 /* StartViewController.swift */,
-				0D3A914C28CEF74B00F76C95 /* Start.storyboard */,
-				0CC23E4028CB514D00770602 /* AppDelegate.swift */,
-				0CC23E4228CB514D00770602 /* SceneDelegate.swift */,
-				0CC23E4428CB514D00770602 /* FooViewController.swift */,
+				0DCEE5CC28D8A31F001D2758 /* FeeViewController.swift */,
 				0CC23E4628CB514D00770602 /* Foo.storyboard */,
-				0CC23E4928CB514E00770602 /* Assets.xcassets */,
-				0CC23E4B28CB514E00770602 /* LaunchScreen.storyboard */,
+				0CC23E4428CB514D00770602 /* FooViewController.swift */,
 				0CC23E4E28CB514E00770602 /* Info.plist */,
+				0CC23E4B28CB514E00770602 /* LaunchScreen.storyboard */,
+				0CC23E4228CB514D00770602 /* SceneDelegate.swift */,
+				0D3A914C28CEF74B00F76C95 /* Start.storyboard */,
+				0D3A914E28CEF75A00F76C95 /* StartViewController.swift */,
 			);
 			path = "swift-test-1";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D3A914F28CEF75A00F76C95 /* StartViewController.swift in Sources */,
+				0DCEE5CD28D8A31F001D2758 /* FeeViewController.swift in Sources */,
 				0D07CD0728CF05DE00A3C5C6 /* BarViewController.swift in Sources */,
 				0CC23E4528CB514D00770602 /* FooViewController.swift in Sources */,
 				0CC23E4128CB514D00770602 /* AppDelegate.swift in Sources */,
